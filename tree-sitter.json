@@ -2,26 +2,40 @@
   "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
   "grammars": [
     {
-      "name": "epics-db",
+      "name": "epics_db",
       "path": ".",
       "scope": "source.epics-db",
       "file-types": [
-        "epics-db"
+        "dbd",
+        "db",
+        "template",
+        "vdb"
       ],
-      "injection-regex": "^epics-db$",
-      "highlights": "queries/highlights.scm"
+      "injection-regex": "^(epics-)?dbd?$",
+      "highlights": "queries/highlights.scm",
+      "injections": "queries/injections.scm"
     }
   ],
   "metadata": {
     "links": {
-      "repository": "https://github.com/minijackson/tree-sitter-epics-db"
+      "repository": "https://github.com/tree-sitter-grammars/tree-sitter-epics-db"
     },
     "version": "0.1.0",
     "license": "MIT",
+    "description": "Grammar for EPICS' database and database definition files",
     "authors": [
       {
-        "name": "Rémi NICOLE"
+        "name": "Rémi NICOLE",
+        "email": "remi.nicole@cea.fr"
       }
     ]
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
   }
 }

@@ -1,3 +1,6 @@
+.envrc
+.direnv
+
 # Rust artifacts
 target/
 

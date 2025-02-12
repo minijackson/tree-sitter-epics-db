@@ -1,11 +1,12 @@
 {
   "name": "tree-sitter-epics-db",
   "version": "0.1.0",
-  "description": "EpicsDb grammar for tree-sitter",
-  "repository": "https://github.com/minijackson/tree-sitter-epics-db",
+  "description": "Grammar for EPICS' database and database definition files",
+  "repository": "https://github.com/tree-sitter-grammars/tree-sitter-epics-db",
   "license": "MIT",
   "author": {
-    "name": "Rémi NICOLE"
+    "name": "Rémi NICOLE",
+    "email": "remi.nicole@cea.fr"
   },
   "main": "bindings/node",
   "types": "bindings/node",
@@ -31,7 +32,7 @@
   },
   "devDependencies": {
     "prebuildify": "^6.0.1",
-    "tree-sitter-cli": "^0.25.1"
+    "tree-sitter-cli": "^0.24.6"
   },
   "peerDependencies": {
     "tree-sitter": "^0.21.1"

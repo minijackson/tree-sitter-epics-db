@@ -1,0 +1,34 @@
+# SPDX-FileCopyrightText: 2015 Argonne National Laboratory
+#
+# SPDX-License-Identifier: EPICS
+# <- comment
+
+record(lsi, "$(user):_APPNAME_:version") {
+# <- keyword
+#     ^ punctuation.bracket
+#      ^ type.builtin
+#           ^ constant
+#            ^ punctuation.bracket
+#              ^ string.special
+#                                      ^ punctuation.bracket
+#                                        ^ punctuation.bracket
+	field(DTYP, "_APPNAME_ version")
+	# <- keyword
+	#    ^ punctuation.bracket
+	#     ^ variable.builtin
+	#           ^ string
+	field(SIZV, "$(SIZV=200)")
+	# <- keyword
+	#    ^ punctuation.bracket
+	#     ^ variable.builtin
+	#           ^ string
+	#            ^ punctuation.bracket
+	#              ^ string.special
+	field(PINI, YES)
+	#           ^ string
+	field(PREC, 2)
+	#           ^ number
+	field(HOPR, 42.5)
+	#           ^ number
+}
+# <- punctuation.bracket

@@ -1,4 +1,4 @@
-module github.com/minijackson/tree-sitter-epics-db
+module github.com/tree-sitter-grammars/tree-sitter-epics-db
 
 go 1.22
 

@@ -1,0 +1,51 @@
+====================
+Simple quoted string
+====================
+
+function("name")
+
+---
+
+(source_file
+	(function_declaration
+		name: (string (string_text_fragment))))
+
+======================
+Simple unquoted string
+======================
+
+function(name)
+function(name-with:<speci4l>;[Chars]+.)
+
+---
+
+(source_file
+	(function_declaration
+		name: (string))
+	(function_declaration
+		name: (string)))
+
+================
+Escape sequences
+================
+
+function("\\\n\"hello\\\$(world)\'\a\b\123\xFe\\")
+
+---
+
+(source_file
+	(function_declaration
+		name: (string
+			(escape_sequence)
+			(escape_sequence)
+			(escape_sequence)
+			(string_text_fragment)
+			(escape_sequence)
+			(escape_sequence)
+			(string_text_fragment)
+			(escape_sequence)
+			(escape_sequence)
+			(escape_sequence)
+			(escape_sequence)
+			(escape_sequence)
+			(escape_sequence))))

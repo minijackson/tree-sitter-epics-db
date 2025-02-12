@@ -2,9 +2,9 @@ prefix=@CMAKE_INSTALL_PREFIX@
 libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
 includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
 
-Name: tree-sitter-epics-db
+Name: tree-sitter-epics_db
 Description: @PROJECT_DESCRIPTION@
 URL: @PROJECT_HOMEPAGE_URL@
 Version: @PROJECT_VERSION@
-Libs: -L${libdir} -ltree-sitter-epics-db
+Libs: -L${libdir} -ltree-sitter-epics_db
 Cflags: -I${includedir}
