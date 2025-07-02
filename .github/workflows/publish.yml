@@ -21,10 +21,10 @@ jobs:
 
   # NOTE: uncomment the packages you want to publish
 
-  # npm:
-  #   uses: tree-sitter/workflows/.github/workflows/package-npm.yml@main
-  #   secrets:
-  #     NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+  npm:
+    uses: tree-sitter/workflows/.github/workflows/package-npm.yml@main
+    secrets:
+      NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   crates:
     uses: tree-sitter/workflows/.github/workflows/package-crates.yml@main
