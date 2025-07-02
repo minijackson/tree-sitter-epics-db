@@ -19,8 +19,6 @@ jobs:
       generate: true
       attestations: true
 
-  # NOTE: uncomment the packages you want to publish
-
   npm:
     uses: tree-sitter/workflows/.github/workflows/package-npm.yml@main
     secrets:
