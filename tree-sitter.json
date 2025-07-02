@@ -20,7 +20,7 @@
     "links": {
       "repository": "https://github.com/tree-sitter-grammars/tree-sitter-epics-db"
     },
-    "version": "0.1.2",
+    "version": "0.1.3",
     "license": "MIT",
     "description": "Grammar for EPICS' database and database definition files",
     "authors": [
