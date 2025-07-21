@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-epics_db
-        VERSION "0.1.3"
+        VERSION "0.1.4"
         DESCRIPTION "Grammar for EPICS' database and database definition files"
         HOMEPAGE_URL "https://github.com/tree-sitter-grammars/tree-sitter-epics-db"
         LANGUAGES C)

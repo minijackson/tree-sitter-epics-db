@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "tree-sitter-epics-db"
 description = "EPICS' database and database definition grammars for tree-sitter"
-version = "0.1.3"
+version = "0.1.4"
 keywords = ["incremental", "parsing", "tree-sitter", "epics"]
 classifiers = [
   "Intended Audience :: Developers",
