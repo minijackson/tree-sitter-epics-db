@@ -22,20 +22,12 @@
     },
     "version": "0.1.4",
     "license": "MIT",
-    "description": "Grammar for EPICS' database and database definition files",
+    "description": "tree-sitter grammar for EPICS' database and database definition files",
     "authors": [
       {
         "name": "Rémi NICOLE",
         "email": "remi.nicole@cea.fr"
       }
     ]
-  },
-  "bindings": {
-    "c": true,
-    "go": true,
-    "node": true,
-    "python": true,
-    "rust": true,
-    "swift": true
   }
 }

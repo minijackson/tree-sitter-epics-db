@@ -1,4 +1,4 @@
-"""Grammar for EPICS' database and database definition files"""
+"""tree-sitter grammar for EPICS' database and database definition files"""
 
 from importlib.resources import files as _files
 
