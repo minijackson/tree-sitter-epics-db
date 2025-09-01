@@ -14,7 +14,7 @@
     "incremental",
     "parsing",
     "tree-sitter",
-    "epics_db"
+    "epics"
   ],
   "files": [
     "grammar.js",
