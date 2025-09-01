@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-epics-db",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "tree-sitter grammar for EPICS' database and database definition files",
   "repository": "https://github.com/tree-sitter-grammars/tree-sitter-epics-db",
   "license": "MIT",
