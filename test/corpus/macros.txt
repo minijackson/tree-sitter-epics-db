@@ -24,7 +24,7 @@ record(ao, "${P}:name") {
 Macro with default
 ==================
 
-record(ao, "${P=a}:${P="a"}:${P="a\"b"}:name") {
+record(ao, "${P=a}:${P="a"}:${P="a\"(b)"}:name") {
 }
 
 ---
