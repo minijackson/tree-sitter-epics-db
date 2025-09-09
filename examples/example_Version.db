@@ -7,4 +7,5 @@ record(lsi, "$(user):example:version") {
     field(DESC, "Version string")
     field(SIZV, "$(SIZV=200)")
     field(PINI, "YES")
+    field(LEN, 42)
 }

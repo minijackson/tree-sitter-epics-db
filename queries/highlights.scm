@@ -78,7 +78,7 @@
 
 (function_declaration name: (_) @function)
 
-(double) @float
+(double) @number
 
 ((field_name) @variable.builtin
  (#any-of? @variable.builtin
