@@ -1,7 +1,7 @@
 [package]
 name = "tree-sitter-epics-db"
 description = "tree-sitter grammar for EPICS' database and database definition files"
-version = "0.1.5"
+version = "0.1.6"
 authors = ["Rémi NICOLE <remi.nicole@cea.fr>"]
 license = "MIT"
 readme = "README.md"
