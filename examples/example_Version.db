@@ -8,4 +8,5 @@ record(lsi, "$(user):example:version") {
     field(SIZV, "$(SIZV=200)")
     field(PINI, "YES")
     field(LEN, 42)
+    field(INP, {const:"Hello, world!"})
 }
