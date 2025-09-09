@@ -14,8 +14,9 @@
 (field_definition type: (_) @type.builtin
  (#any-of? @type.builtin
   "DBF_STRING" "DBF_CHAR" "DBF_UCHAR" "DBF_SHORT" "DBF_USHORT" "DBF_LONG"
-  "DBF_ULONG" "DBF_FLOAT" "DBF_DOUBLE" "DBF_ENUM" "DBF_MENU" "DBF_DEVICE"
-  "DBF_INLINK" "DBF_OUTLINK" "DBF_FWDLINK" "DBF_NOACCESS"))
+  "DBF_ULONG" "DBF_FLOAT" "DBF_DOUBLE" "DBF_INT64" "DBF_UINT64" "DBF_ENUM"
+  "DBF_MENU" "DBF_DEVICE" "DBF_INLINK" "DBF_OUTLINK" "DBF_FWDLINK"
+  "DBF_NOACCESS"))
 
 ((field_item) @function)
 ((field_item) @function.builtin
