@@ -81,6 +81,7 @@
 
 (double) @number
 
+(field_name) @variable
 ((field_name) @variable.builtin
  (#any-of? @variable.builtin
   "NAME" "DESC" "ASG" "SCAN" "PINI" "PHAS" "EVNT" "TSE" "TSEL" "DTYP" "DISV"
