@@ -4,7 +4,7 @@ endif
 
 LANGUAGE_NAME := tree-sitter-epics-db
 HOMEPAGE_URL := https://github.com/tree-sitter-grammars/tree-sitter-epics-db
-VERSION := 0.1.6
+VERSION := 0.1.7
 
 # repository
 SRC_DIR := src
