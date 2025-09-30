@@ -50,7 +50,7 @@
         "required": true,
         "types": [
           {
-            "type": "double",
+            "type": "number",
             "named": true
           }
         ]
@@ -60,7 +60,7 @@
         "required": true,
         "types": [
           {
-            "type": "double",
+            "type": "number",
             "named": true
           }
         ]
@@ -117,7 +117,6 @@
   {
     "type": "comment",
     "named": true,
-    "extra": true,
     "fields": {}
   },
   {
@@ -202,6 +201,10 @@
         "types": [
           {
             "type": "json_value",
+            "named": true
+          },
+          {
+            "type": "number",
             "named": true
           },
           {
@@ -366,6 +369,10 @@
             "named": true
           },
           {
+            "type": "number",
+            "named": true
+          },
+          {
             "type": "string",
             "named": true
           }
@@ -407,7 +414,6 @@
   {
     "type": "macro_expansion",
     "named": true,
-    "extra": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -806,10 +812,6 @@
     "named": false
   },
   {
-    "type": "double",
-    "named": true
-  },
-  {
     "type": "driver",
     "named": false
   },
@@ -852,6 +854,10 @@
   {
     "type": "null",
     "named": false
+  },
+  {
+    "type": "number",
+    "named": true
   },
   {
     "type": "path",

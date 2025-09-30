@@ -1,7 +1,4 @@
 (string) @string
-((string) @number
- ;; TODO: make this case insensitive somehow
- (#match? @number "^[+-]?(([0-9]+([.][0-9]*)?|[.][0-9]+)(e[+-]?[0-9]+)?|0x[0-9a-f]+([.][0-9a-f]*)?(p[+-]?[0-9]+)?|inf(inity)?|nan)$"))
 (escape_sequence) @string.special
 (macro_expansion) @string.special
 
@@ -79,7 +76,7 @@
 
 (function_declaration name: (_) @function)
 
-(double) @number
+(number) @number.float
 
 (field_name) @variable
 ((field_name) @variable.builtin

@@ -143,14 +143,14 @@ module.exports = grammar({
       ),
     breakpoint_item: ($) =>
       seq(
-        field("raw_value", $.double),
+        field("raw_value", $.number),
         optional(","),
-        field("eng_value", $.double),
+        field("eng_value", $.number),
         optional(",")
       ),
 
     // According to the strtod(3) manpage
-    double: ($) =>
+    number: ($) =>
       /[+-]?(([0-9]+(\.[0-9]*)?|\.[0-9]+)(e[+-]?[0-9]+)?|0x[0-9a-f]+(\.[0-9a-f]*)?(p[+-]?[0-9]+)?|inf(inity)?|nan)/i,
 
     record_instance: ($) =>
@@ -178,7 +178,7 @@ module.exports = grammar({
         "(",
         field("name", $.field_name),
         ",",
-        field("value", choice($.string, $.json_value)),
+        field("value", $._field_value),
         ")"
       ),
 
@@ -188,8 +188,15 @@ module.exports = grammar({
         "(",
         field("name", $.string),
         ",",
-        field("value", choice($.string, $.json_value)),
+        field("value", $._field_value),
         ")"
+      ),
+
+    _field_value: ($) =>
+      choice(
+        $.number,
+        $.string,
+        $.json_value,
       ),
 
     alias_statement: ($) =>

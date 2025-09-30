@@ -102,6 +102,32 @@ record(record_type, record_name3) {}
 		type: (record_type)
 		name: (record_name)))
 
+===================
+Record with numbers
+===================
+
+record(record_type, record_name) {
+    field(field_name, 42)
+    field(field_name, -42)
+    field(field_name, -42.5)
+    field(field_name, 0x54)
+    field(field_name, 0x54.2p4)
+    field(field_name, NAN)
+}
+
+---
+
+(source_file
+	(record_instance
+		type: (record_type)
+		name: (record_name)
+		(field name: (field_name) value: (number))
+		(field name: (field_name) value: (number))
+		(field name: (field_name) value: (number))
+		(field name: (field_name) value: (number))
+		(field name: (field_name) value: (number))
+		(field name: (field_name) value: (number))))
+
 ================
 Record with JSON
 ================

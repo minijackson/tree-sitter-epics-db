@@ -109,10 +109,10 @@ breaktable(typeJdegC) {
 (source_file
 	(breakpoint_table
 		name: (string)
-		(breakpoint_item raw_value: (double) eng_value: (double))
-		(breakpoint_item raw_value: (double) eng_value: (double))
-		(breakpoint_item raw_value: (double) eng_value: (double))
-		(breakpoint_item raw_value: (double) eng_value: (double))
-		(breakpoint_item raw_value: (double) eng_value: (double))
-		(breakpoint_item raw_value: (double) eng_value: (double))
-		(breakpoint_item raw_value: (double) eng_value: (double))))
+		(breakpoint_item raw_value: (number) eng_value: (number))
+		(breakpoint_item raw_value: (number) eng_value: (number))
+		(breakpoint_item raw_value: (number) eng_value: (number))
+		(breakpoint_item raw_value: (number) eng_value: (number))
+		(breakpoint_item raw_value: (number) eng_value: (number))
+		(breakpoint_item raw_value: (number) eng_value: (number))
+		(breakpoint_item raw_value: (number) eng_value: (number))))

@@ -609,7 +609,7 @@
           "name": "raw_value",
           "content": {
             "type": "SYMBOL",
-            "name": "double"
+            "name": "number"
           }
         },
         {
@@ -629,7 +629,7 @@
           "name": "eng_value",
           "content": {
             "type": "SYMBOL",
-            "name": "double"
+            "name": "number"
           }
         },
         {
@@ -646,7 +646,7 @@
         }
       ]
     },
-    "double": {
+    "number": {
       "type": "PATTERN",
       "value": "[+-]?(([0-9]+(\\.[0-9]*)?|\\.[0-9]+)(e[+-]?[0-9]+)?|0x[0-9a-f]+(\\.[0-9a-f]*)?(p[+-]?[0-9]+)?|inf(inity)?|nan)",
       "flags": "i"
@@ -794,17 +794,8 @@
           "type": "FIELD",
           "name": "value",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "string"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "json_value"
-              }
-            ]
+            "type": "SYMBOL",
+            "name": "_field_value"
           }
         },
         {
@@ -840,22 +831,30 @@
           "type": "FIELD",
           "name": "value",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "string"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "json_value"
-              }
-            ]
+            "type": "SYMBOL",
+            "name": "_field_value"
           }
         },
         {
           "type": "STRING",
           "value": ")"
+        }
+      ]
+    },
+    "_field_value": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "json_value"
         }
       ]
     },
