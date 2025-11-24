@@ -35,15 +35,15 @@ module.exports = grammar({
         $.alias_statement
       ),
 
-    path_definition: ($) => seq(choice("path", "addpath"), $.string),
+    path_definition: ($) => seq(choice("path", "addpath"), $._string),
 
-    include_statement: ($) => seq("include", $.string),
+    include_statement: ($) => seq("include", $._string),
 
     menu_definition: ($) =>
       seq(
         "menu",
         "(",
-        field("name", $.string),
+        field("name", $._string),
         ")",
         "{",
         repeat(choice($.menu_choice, $.include_statement)),
@@ -54,9 +54,9 @@ module.exports = grammar({
       seq(
         "choice",
         "(",
-        field("name", $.string),
+        field("name", $._string),
         ",",
-        field("string", $.string),
+        field("string", $._string),
         ")"
       ),
 
@@ -77,7 +77,7 @@ module.exports = grammar({
         "(",
         field("name", $.field_name),
         ",",
-        field("type", $.string),
+        field("type", $._string),
         ")",
         "{",
         repeat($.field_descriptor),
@@ -85,7 +85,9 @@ module.exports = grammar({
       ),
 
     field_descriptor: ($) =>
-      seq($.field_item, "(", field("value", $.string), ")"),
+      seq($.field_item, "(", field("value", $._string), ")"),
+
+    field_item: ($) => alias($.word, "field_item"),
 
     cdef: ($) => seq("%", field("code", $.ccode)),
 
@@ -97,45 +99,45 @@ module.exports = grammar({
         "(",
         field("record_type", $.record_type),
         ",",
-        field("link_type", $.string),
+        field("link_type", $._string),
         ",",
-        field("dset_name", $.string),
+        field("dset_name", $._string),
         ",",
-        field("choice", $.string),
+        field("choice", $._string),
         ")"
       ),
 
-    driver_declaration: ($) => seq("driver", "(", field("name", $.string), ")"),
+    driver_declaration: ($) => seq("driver", "(", field("name", $._string), ")"),
 
     // Not documented, but present
     link_declaration: ($) =>
       seq(
         "link",
         "(",
-        field("name", $.string),
+        field("name", $._string),
         ",",
-        field("jlif_name", $.string),
+        field("jlif_name", $._string),
         ")"
       ),
 
     registrar_declaration: ($) =>
-      seq("registrar", "(", field("name", $.string), ")"),
+      seq("registrar", "(", field("name", $._string), ")"),
     variable_declaration: ($) =>
       seq(
         "variable",
         "(",
-        field("name", $.string),
-        optional(seq(",", field("type", $.string))),
+        field("name", $._string),
+        optional(seq(",", field("type", $._string))),
         ")"
       ),
     function_declaration: ($) =>
-      seq("function", "(", field("name", $.string), ")"),
+      seq("function", "(", field("name", $._string), ")"),
 
     breakpoint_table: ($) =>
       seq(
         "breaktable",
         "(",
-        field("name", $.string),
+        field("name", $._string),
         ")",
         "{",
         repeat($.breakpoint_item),
@@ -186,7 +188,7 @@ module.exports = grammar({
       seq(
         "info",
         "(",
-        field("name", $.string),
+        field("name", $._string),
         ",",
         field("value", $._field_value),
         ")"
@@ -194,8 +196,8 @@ module.exports = grammar({
 
     _field_value: ($) =>
       choice(
+        $._string,
         $.number,
-        $.string,
         $.json_value,
       ),
 
@@ -213,17 +215,15 @@ module.exports = grammar({
 
     comment: ($) => seq("#", /.*/),
 
-    string: ($) => $._string,
+    _string: ($) => choice($.string, $.word),
 
-    _string: ($) =>
-      choice(
-        seq(
-          '"',
-          repeat(choice($.escape_sequence, $.string_text_fragment)),
-          '"'
-        ),
-        $._unquoted_string
+    string: ($) =>
+      seq(
+        '"',
+        repeat(choice($.escape_sequence, $.string_text_fragment)),
+        '"'
       ),
+
     string_text_fragment: ($) =>
       prec.right(
         repeat1(
@@ -246,11 +246,10 @@ module.exports = grammar({
     _json_object: ($) => seq("{", repeat(choice(/[^{}]/, $._json_object)), "}"),
     _json_array: ($) => seq("[", repeat(choice(/[^\[\]]/, $._json_array)), "]"),
 
-    _unquoted_string: ($) => /[a-zA-Z0-9_+:.\[\]<>;-]+/,
+    word: ($) => /[a-zA-Z0-9_+:.\[\]<>;-]+/,
 
     record_type: ($) => $._string,
     record_name: ($) => $._string,
-    field_item: ($) => $._string,
     field_name: ($) => $._string,
 
     macro_expansion: ($) =>

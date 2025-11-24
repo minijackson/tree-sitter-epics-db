@@ -21,9 +21,9 @@ function(name-with:<speci4l>;[Chars]+.)
 
 (source_file
 	(function_declaration
-		name: (string))
+		name: (word))
 	(function_declaration
-		name: (string)))
+		name: (word)))
 
 ================
 Escape sequences

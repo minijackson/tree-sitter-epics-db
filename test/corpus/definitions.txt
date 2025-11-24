@@ -24,12 +24,12 @@ menu(menuYesNo) {
 
 (source_file
 	(menu_definition
-		name: (string)
+		name: (word)
 		(menu_choice
-			name: (string)
+			name: (word)
 			string: (string (string_text_fragment)))
 		(menu_choice
-			name: (string)
+			name: (word)
 			string: (string (string_text_fragment)))))
 
 ======================
@@ -60,23 +60,23 @@ recordtype(record_type) {
 ---
 
 (source_file
-	(record_type_definition name: (record_type))
+	(record_type_definition name: (record_type (word)))
 	(record_type_definition
-        name: (record_type)
+        name: (record_type (word))
         (include_statement (string (string_text_fragment)))
         (field_definition
-            name: (field_name)
-            type: (string)
-            (field_descriptor (field_item) value: (string))
+            name: (field_name (word))
+            type: (word)
+            (field_descriptor (field_item) value: (word))
             (field_descriptor (field_item) value: (string (string_text_fragment)))
             (field_descriptor (field_item) value: (string (string_text_fragment)))
             (field_descriptor (field_item) value: (string (string_text_fragment)))
-            (field_descriptor (field_item) value: (string))
-            (field_descriptor (field_item) value: (string))
-            (field_descriptor (field_item) value: (string))
-            (field_descriptor (field_item) value: (string))
-            (field_descriptor (field_item) value: (string))
+            (field_descriptor (field_item) value: (word))
+            (field_descriptor (field_item) value: (word))
+            (field_descriptor (field_item) value: (word))
+            (field_descriptor (field_item) value: (word))
+            (field_descriptor (field_item) value: (word))
             (field_descriptor (field_item) value: (string (string_text_fragment)))
-            (field_descriptor (field_item) value: (string))
-            (field_descriptor (field_item) value: (string)))
+            (field_descriptor (field_item) value: (word))
+            (field_descriptor (field_item) value: (word)))
         (cdef code: (ccode))))

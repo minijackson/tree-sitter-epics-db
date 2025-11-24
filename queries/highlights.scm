@@ -1,8 +1,9 @@
 (string) @string
+(word) @string
 (escape_sequence) @string.special
 (macro_expansion) @string.special
 
-(record_name) @constant
+(record_name (_) @constant)
 
 (menu_definition name: (_) @type)
 (menu_choice name: (_) @constant)
@@ -57,8 +58,8 @@
  (#any-of? @boolean
   "YES" "NO"))
 
-(record_type) @type
-((record_type) @type.builtin
+(record_type (_) @type)
+((record_type (word) @type.builtin)
  (#any-of? @type.builtin
   "aai" "aao" "ai" "ao" "aSub" "bi" "bo" "calc" "calcout" "compress" "dfanout"
   "event" "fanout" "histogram" "longin" "longout" "int64in" "int64out" "mbbi"
@@ -78,8 +79,8 @@
 
 (number) @number.float
 
-(field_name) @variable
-((field_name) @variable.builtin
+(field_name (_) @variable)
+((field_name (word) @variable.builtin)
  (#any-of? @variable.builtin
   "NAME" "DESC" "ASG" "SCAN" "PINI" "PHAS" "EVNT" "TSE" "TSEL" "DTYP" "DISV"
   "DISA" "SDIS" "MLOK" "MLIS" "DISP" "PROC" "STAT" "SEVR" "NSTA" "NSEV" "ACKS"

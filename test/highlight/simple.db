@@ -34,3 +34,7 @@ record(lsi, "$(user):_APPNAME_:version") {
 	#     ^ variable
 }
 # <- punctuation.bracket
+
+record(bla, "bla") {
+    #  ^ type
+}

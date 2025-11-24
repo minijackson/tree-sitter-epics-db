@@ -12,8 +12,8 @@ record(ao, "name") {
 (source_file
 	(comment)
 	(record_instance
-		type: (record_type)
-		name: (record_name (string_text_fragment))))
+		type: (record_type (word))
+		name: (record_name (string (string_text_fragment)))))
 
 ==============
 Simpler record
@@ -27,10 +27,10 @@ record(ao, "name") {
 
 (source_file
 	(record_instance
-		type: (record_type)
-		name: (record_name (string_text_fragment))
+		type: (record_type (word))
+		name: (record_name (string (string_text_fragment)))
 		(field
-			name: (field_name)
+			name: (field_name (word))
 			value: (string (string_text_fragment)))))
 
 =============
@@ -46,13 +46,13 @@ record(ao, "name") {
 
 (source_file
 	(record_instance
-		type: (record_type)
-		name: (record_name (string_text_fragment))
+		type: (record_type (word))
+		name: (record_name (string (string_text_fragment)))
 		(field
-			name: (field_name)
+			name: (field_name (word))
 			value: (string (string_text_fragment)))
 		(field
-			name: (field_name)
+			name: (field_name (word))
 			value: (string (string_text_fragment)))))
 
 ==============
@@ -69,14 +69,14 @@ record(record_type, record_name) {
 
 (source_file
 	(record_instance
-		type: (record_type)
-		name: (record_name)
-		(alias alias_name: (record_name))
+		type: (record_type (word))
+		name: (record_name (word))
+		(alias alias_name: (record_name (word)))
 		(field
-			name: (field_name)
+			name: (field_name (word))
 			value: (string (string_text_fragment)))
 		(info
-			name: (string)
+			name: (word)
 			value: (string (string_text_fragment)))))
 
 ============
@@ -93,14 +93,14 @@ record(record_type, record_name3) {}
 
 (source_file
 	(record_instance
-		type: (record_type)
-		name: (record_name))
+		type: (record_type (word))
+		name: (record_name (word)))
 	(record_instance
-		type: (record_type)
-		name: (record_name))
+		type: (record_type (word))
+		name: (record_name (word)))
 	(record_instance
-		type: (record_type)
-		name: (record_name)))
+		type: (record_type (word))
+		name: (record_name (word))))
 
 ===================
 Record with numbers
@@ -119,14 +119,14 @@ record(record_type, record_name) {
 
 (source_file
 	(record_instance
-		type: (record_type)
-		name: (record_name)
-		(field name: (field_name) value: (number))
-		(field name: (field_name) value: (number))
-		(field name: (field_name) value: (number))
-		(field name: (field_name) value: (number))
-		(field name: (field_name) value: (number))
-		(field name: (field_name) value: (number))))
+		type: (record_type (word))
+		name: (record_name (word))
+		(field name: (field_name (word)) value: (number))
+		(field name: (field_name (word)) value: (number))
+		(field name: (field_name (word)) value: (number))
+		(field name: (field_name (word)) value: (number))
+		(field name: (field_name (word)) value: (number))
+		(field name: (field_name (word)) value: (number))))
 
 ================
 Record with JSON
@@ -143,9 +143,9 @@ record(record_type, record_name) {
 
 (source_file
 	(record_instance
-		type: (record_type)
-		name: (record_name)
-		(field name: (field_name) value: (json_value))
-		(field name: (field_name) value: (json_value))
-		(field name: (field_name) value: (json_value))
-		(field name: (field_name) value: (json_value))))
+		type: (record_type (word))
+		name: (record_name (word))
+		(field name: (field_name (word)) value: (json_value))
+		(field name: (field_name (word)) value: (json_value))
+		(field name: (field_name (word)) value: (json_value))
+		(field name: (field_name (word)) value: (json_value))))

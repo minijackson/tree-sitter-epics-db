@@ -78,6 +78,10 @@
           {
             "type": "string",
             "named": true
+          },
+          {
+            "type": "word",
+            "named": true
           }
         ]
       }
@@ -117,6 +121,7 @@
   {
     "type": "comment",
     "named": true,
+    "extra": true,
     "fields": {}
   },
   {
@@ -130,6 +135,10 @@
           {
             "type": "string",
             "named": true
+          },
+          {
+            "type": "word",
+            "named": true
           }
         ]
       },
@@ -140,6 +149,10 @@
           {
             "type": "string",
             "named": true
+          },
+          {
+            "type": "word",
+            "named": true
           }
         ]
       },
@@ -149,6 +162,10 @@
         "types": [
           {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "word",
             "named": true
           }
         ]
@@ -175,6 +192,10 @@
         "types": [
           {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "word",
             "named": true
           }
         ]
@@ -210,6 +231,10 @@
           {
             "type": "string",
             "named": true
+          },
+          {
+            "type": "word",
+            "named": true
           }
         ]
       }
@@ -235,6 +260,10 @@
         "types": [
           {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "word",
             "named": true
           }
         ]
@@ -262,6 +291,10 @@
           {
             "type": "string",
             "named": true
+          },
+          {
+            "type": "word",
+            "named": true
           }
         ]
       }
@@ -280,36 +313,22 @@
   {
     "type": "field_item",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "escape_sequence",
-          "named": true
-        },
-        {
-          "type": "string_text_fragment",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "field_name",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
-      "required": false,
+      "multiple": false,
+      "required": true,
       "types": [
         {
-          "type": "escape_sequence",
+          "type": "string",
           "named": true
         },
         {
-          "type": "string_text_fragment",
+          "type": "word",
           "named": true
         }
       ]
@@ -325,6 +344,10 @@
         "types": [
           {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "word",
             "named": true
           }
         ]
@@ -342,6 +365,10 @@
         {
           "type": "string",
           "named": true
+        },
+        {
+          "type": "word",
+          "named": true
         }
       ]
     }
@@ -356,6 +383,10 @@
         "types": [
           {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "word",
             "named": true
           }
         ]
@@ -374,6 +405,10 @@
           },
           {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "word",
             "named": true
           }
         ]
@@ -396,6 +431,10 @@
           {
             "type": "string",
             "named": true
+          },
+          {
+            "type": "word",
+            "named": true
           }
         ]
       },
@@ -406,6 +445,10 @@
           {
             "type": "string",
             "named": true
+          },
+          {
+            "type": "word",
+            "named": true
           }
         ]
       }
@@ -414,6 +457,7 @@
   {
     "type": "macro_expansion",
     "named": true,
+    "extra": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -437,6 +481,10 @@
           {
             "type": "string",
             "named": true
+          },
+          {
+            "type": "word",
+            "named": true
           }
         ]
       },
@@ -446,6 +494,10 @@
         "types": [
           {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "word",
             "named": true
           }
         ]
@@ -462,6 +514,10 @@
         "types": [
           {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "word",
             "named": true
           }
         ]
@@ -492,6 +548,10 @@
       "types": [
         {
           "type": "string",
+          "named": true
+        },
+        {
+          "type": "word",
           "named": true
         }
       ]
@@ -550,15 +610,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
-      "required": false,
+      "multiple": false,
+      "required": true,
       "types": [
         {
-          "type": "escape_sequence",
+          "type": "string",
           "named": true
         },
         {
-          "type": "string_text_fragment",
+          "type": "word",
           "named": true
         }
       ]
@@ -569,15 +629,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
-      "required": false,
+      "multiple": false,
+      "required": true,
       "types": [
         {
-          "type": "escape_sequence",
+          "type": "string",
           "named": true
         },
         {
-          "type": "string_text_fragment",
+          "type": "word",
           "named": true
         }
       ]
@@ -627,6 +687,10 @@
         "types": [
           {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "word",
             "named": true
           }
         ]
@@ -732,6 +796,10 @@
           {
             "type": "string",
             "named": true
+          },
+          {
+            "type": "word",
+            "named": true
           }
         ]
       },
@@ -741,6 +809,10 @@
         "types": [
           {
             "type": "string",
+            "named": true
+          },
+          {
+            "type": "word",
             "named": true
           }
         ]
@@ -828,6 +900,10 @@
     "named": false
   },
   {
+    "type": "field_item",
+    "named": false
+  },
+  {
     "type": "function",
     "named": false
   },
@@ -882,6 +958,10 @@
   {
     "type": "variable",
     "named": false
+  },
+  {
+    "type": "word",
+    "named": true
   },
   {
     "type": "{",
