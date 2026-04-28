@@ -3,24 +3,21 @@
   "grammars": [
     {
       "name": "epics_db",
-      "path": ".",
       "scope": "source.epics-db",
+      "path": ".",
       "file-types": [
         "dbd",
         "db",
         "template",
         "vdb"
       ],
-      "injection-regex": "^(epics-)?dbd?$",
       "highlights": "queries/highlights.scm",
-      "injections": "queries/injections.scm"
+      "injections": "queries/injections.scm",
+      "injection-regex": "^(epics-)?dbd?$"
     }
   ],
   "metadata": {
-    "links": {
-      "repository": "https://github.com/tree-sitter-grammars/tree-sitter-epics-db"
-    },
-    "version": "0.2.0",
+    "version": "0.3.0",
     "license": "MIT",
     "description": "tree-sitter grammar for EPICS' database and database definition files",
     "authors": [
@@ -28,6 +25,19 @@
         "name": "Rémi NICOLE",
         "email": "remi.nicole@cea.fr"
       }
-    ]
+    ],
+    "links": {
+      "repository": "https://github.com/tree-sitter-grammars/tree-sitter-epics-db"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "java": false,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
   }
 }

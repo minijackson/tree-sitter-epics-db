@@ -1,7 +1,8 @@
 {
   "name": "tree-sitter-epics-db",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "tree-sitter grammar for EPICS' database and database definition files",
+  "type": "module",
   "repository": "https://github.com/tree-sitter-grammars/tree-sitter-epics-db",
   "license": "MIT",
   "author": {
@@ -32,10 +33,11 @@
   },
   "devDependencies": {
     "prebuildify": "^6.0.1",
+    "tree-sitter": "^0.24.0",
     "tree-sitter-cli": "^0.25.10"
   },
   "peerDependencies": {
-    "tree-sitter": "^0.25.0"
+    "tree-sitter": "^0.24.0"
   },
   "peerDependenciesMeta": {
     "tree-sitter": {

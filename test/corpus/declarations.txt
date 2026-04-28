@@ -20,14 +20,14 @@ device(ai,VME_IO,devAiXy566Se,"XYCOM-566 SE Scanned")
 
 (source_file
 	(device_support_declaration
-		record_type: (record_type)
-		link_type: (string)
-		dset_name: (string)
+		record_type: (record_type (word))
+		link_type: (word)
+		dset_name: (word)
 		choice: (string (string_text_fragment)))
 	(device_support_declaration
-		record_type: (record_type)
-		link_type: (string)
-		dset_name: (string)
+		record_type: (record_type (word))
+		link_type: (word)
+		dset_name: (word)
 		choice: (string (string_text_fragment))))
 
 ==================
@@ -40,8 +40,8 @@ driver(drvXy210)
 ---
 
 (source_file
-	(driver_declaration name: (string))
-	(driver_declaration name: (string)))
+	(driver_declaration name: (word))
+	(driver_declaration name: (word)))
 
 ================
 Link declaration
@@ -52,7 +52,7 @@ link(debug, lnkDebugIf)
 ---
 
 (source_file
-	(link_declaration name: (string) jlif_name: (string)))
+	(link_declaration name: (word) jlif_name: (word)))
 
 =====================
 Registrar declaration
@@ -63,7 +63,7 @@ registrar(myRegistrar)
 ---
 
 (source_file
-	(registrar_declaration name: (string)))
+	(registrar_declaration name: (word)))
 
 ====================
 Variable declaration
@@ -75,8 +75,8 @@ variable(myParameter, double)
 ---
 
 (source_file
-	(variable_declaration name: (string))
-	(variable_declaration name: (string) type: (string)))
+	(variable_declaration name: (word))
+	(variable_declaration name: (word) type: (word)))
 
 ====================
 Function declaration
@@ -87,7 +87,7 @@ function(myFunction)
 ---
 
 (source_file
-	(function_declaration name: (string)))
+	(function_declaration name: (word)))
 
 
 ================
@@ -108,7 +108,7 @@ breaktable(typeJdegC) {
 
 (source_file
 	(breakpoint_table
-		name: (string)
+		name: (word)
 		(breakpoint_item raw_value: (number) eng_value: (number))
 		(breakpoint_item raw_value: (number) eng_value: (number))
 		(breakpoint_item raw_value: (number) eng_value: (number))
