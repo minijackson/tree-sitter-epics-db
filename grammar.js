@@ -10,7 +10,7 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 
-module.exports = grammar({
+export default grammar({
   name: "epics_db",
 
   extras: ($) => [/\s/, $.comment, $.macro_expansion],
